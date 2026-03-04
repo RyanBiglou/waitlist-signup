@@ -52,7 +52,8 @@
     setLoading(true);
 
     try {
-      var result = await supabase.from("waitlist").insert({ email: email }).select("id").single();
+      // Don't use .select() after insert — anon has no SELECT on waitlist, so it would fail
+      var result = await supabase.from("waitlist").insert({ email: email });
 
       if (result.error) {
         if (result.error.code === "23505") {
