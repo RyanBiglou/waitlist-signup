@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FarmToTable — Join the Waitlist</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <a href="/" class="logo">FarmToTable</a>
+  </header>
+
+  <main class="waitlist">
+    <div class="waitlist__content">
+      <p class="waitlist__kicker">Fresh from the farm, straight to you</p>
+      <h1 class="waitlist__headline">Join the&nbsp;waitlist</h1>
+      <p class="waitlist__lead">
+        Be the first to know when we launch. Get early access, exclusive offers,
+        and a direct line to local growers and seasonal produce.
+      </p>
+
+      <form class="waitlist-form" id="waitlist-form" novalidate>
+        <div class="waitlist-form__row">
+          <label for="email" class="visually-hidden">Email address</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            class="waitlist-form__input"
+            placeholder="you@example.com"
+            required
+            autocomplete="email"
+          />
+          <button type="submit" class="waitlist-form__submit" id="submit-btn">
+            Join waitlist
+          </button>
+        </div>
+        <p class="waitlist-form__message" id="form-message" role="status" aria-live="polite"></p>
+      </form>
+
+      <ul class="waitlist__benefits" aria-hidden="true">
+        <li>Early access at launch</li>
+        <li>Exclusive member offers</li>
+        <li>Weekly seasonal picks</li>
+      </ul>
+    </div>
+
+    <div class="waitlist__visual">
+      <div class="blob blob--1"></div>
+      <div class="blob blob--2"></div>
+      <div class="blob blob--3"></div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>FarmToTable — Connecting you with local growers.</p>
+  </footer>
+
+  <script src="config.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
